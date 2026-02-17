@@ -8,7 +8,7 @@
 
   vars:
     container_name: "swiggy_container"
-    image_name: "dhee31/swiggy:latest"
+    image_name: "uma777/swiggy_app:latest"
     container_port: "8084"     # Host Port
     request_port: "8080"       # Container Port (Tomcat default)
 
