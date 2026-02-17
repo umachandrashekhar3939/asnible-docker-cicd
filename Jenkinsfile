@@ -5,7 +5,7 @@ pipeline {
         PROJECT_NAME = "swiggy_cicd_docker_ansible_war"
         DOCKERHUB_USERNAME = "uma777"
         DOCKERHUB_REPO = "swiggy"
-        IMAGE_NAME = "${DOCKERHUB_USERNAME}/${D3OCKERHUB_REPO}"
+        IMAGE_NAME = "${DOCKERHUB_USERNAME}/${DOCKERHUB_REPO}"
     }
 
     stages {
@@ -79,12 +79,8 @@ pipeline {
             steps {
                 sh '''
                     set -e
-                    echo "Copying deploy playbook..."
-
                     sudo cp "$WORKSPACE/deploy-container.yml" /home/ansible/
                     sudo chown ansible:ansible /home/ansible/deploy-container.yml
-
-                    echo "File copied successfully!"
                 '''
             }
         }
